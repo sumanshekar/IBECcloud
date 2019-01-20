@@ -1,0 +1,400 @@
+@CHARSET "ISO-8859-1";
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+.display_table_header {
+	font-size: 24px;
+	color: saddlebrown
+}
+
+.display_table {
+	border-collapse: collapse;
+	width: 70%;
+	margin-left: 10px;
+}
+
+.display_table th, td {
+	text-align: left;
+	padding: 8px;
+}
+
+.display_table tr:nth-child(even) {
+	background-color: #f2f2f2
+}
+
+.display_table th {
+	background-color: #4CAF50;
+	color: white;
+}
+
+.empty_table_text {
+	font-size: 14px;
+	text-align: center;
+	color: gray;
+	height: 80px;
+}
+
+.nav_style {
+	font: normal;
+}
+
+.nav_style ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: gray;
+}
+
+.nav_style li {
+	float: left;
+	border-style: solid;
+	border-width: 1px;
+	border-color: white;
+}
+
+.nav_style li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	background-color: #f16f27;
+	text-decoration: none;
+}
+
+.nav_style li a:hover {
+	background-color: #ff0080;
+	text-decoration: underline;
+}
+
+.navigation {
+	list-style: none;
+	margin: 0;
+	background: deepskyblue;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	justify-content: flex-start;
+}
+
+.navigation a {
+	text-decoration: none;
+	display: block;
+	padding: 1em;
+	color: white;
+}
+
+.navigation a:hover {
+	background: darken(deepskyblue, 2%);
+}
+
+.header_style {
+	border: 1px solid #666;
+	padding: 25px;
+	background-color: #ff0190;
+	color: white;
+	font-size: 28px;
+}
+
+.login_style {
+	border: 3px solid #f1f1f1;
+}
+
+.login_style input[type=submit], input[type=button] {
+	background-color: #f16f27;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+}
+
+.login_style input[type=reset] {
+	background-color: #c0c0c0;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+}
+
+.login_style input[type=text], input[type=password], input[type=email],
+	input[type=date] {
+	width: 100%;
+	padding: 6px 10px;
+	margin: 6px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+.login_style option {
+	width: 100%;
+	padding: 6px 10px;
+	margin: 6px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+.leftnav_bar {
+	
+}
+
+.leftnav_bar ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 200px;
+	background-color: #f1f1f1;
+}
+
+.leftnav_bar li a {
+	display: block;
+	color: #000;
+	padding: 8px 16px;
+	text-decoration: none;
+}
+
+.leftnav_bar li a.active {
+	background-color: #4CAF50;
+	color: white;
+}
+
+.leftnav_bar
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+li
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+a
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:hover
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:not
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+(
+.active
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+)
+{
+background-color
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+#555
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+;
+color
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+white
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+;
+}
+.pageTitle {
+	margin-left: 10px;
+	font-size: 28px;
+}
+
+.backButton {
+	background-color: e7e7e7; /* button bg color */
+	border: none;
+	color: white;
+	padding: 10px 22px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	margin: 4px 2px;
+	cursor: pointer;
+	margin: 10px;
+}
+
+.button1 {
+	font-size: 10px;
+}
+
+.button2 {
+	font-size: 12px;
+}
+
+.button3 {
+	font-size: 16px;
+}
+
+.button4 {
+	font-size: 20px;
+}
+
+.button5 {
+	font-size: 24px;
+}

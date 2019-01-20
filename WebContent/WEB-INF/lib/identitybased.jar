@@ -1,0 +1,99 @@
+/*
+SQLyog Community Edition- MySQL GUI v8.12 
+MySQL - 5.5.5-10.1.16-MariaDB : Database - identitybased
+*********************************************************************
+*/
+
+/*!40101 SET NAMES utf8 */;
+
+/*!40101 SET SQL_MODE=''*/;
+
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`identitybased` /*!40100 DEFAULT CHARACTER SET latin1 */;
+
+USE `identitybased`;
+
+/*Table structure for table `attackerdetails` */
+
+DROP TABLE IF EXISTS `attackerdetails`;
+
+CREATE TABLE `attackerdetails` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `filename` varchar(25) DEFAULT NULL,
+  `hashkey` varchar(50) DEFAULT NULL,
+  `server` varchar(30) DEFAULT NULL,
+  `content` text,
+  `attackerid` varchar(25) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+
+/*Data for the table `attackerdetails` */
+
+insert  into `attackerdetails`(`id`,`filename`,`hashkey`,`server`,`content`,`attackerid`) values (5,'test.txt','85549348','CS2','Hello Javaasdf','attacker'),(6,'c.txt','95504499','CS1','dfsdf','attacker'),(7,'c.txt','-753078575','CS1','V2VsY29tZSB0byBNZWdhaW5mb3dhcmUasdfu','attacker'),(8,'c.txt','-241750281','CS1','V2VsY29tZSB0byBNZWdhaW5mb3dhcmasUu','attacker'),(9,'c.txt','3003504','CS1','asfd','attacker'),(10,'c.txt','3003504','CS1','asfd','attacker'),(11,'c.txt','3003504','CS1','asfd','attacker'),(12,'c.txt','3003504','CS1','asfd','attacker');
+
+/*Table structure for table `dataowner` */
+
+DROP TABLE IF EXISTS `dataowner`;
+
+CREATE TABLE `dataowner` (
+  `uid` int(10) NOT NULL AUTO_INCREMENT,
+  `fname` varchar(50) DEFAULT NULL,
+  `lname` varchar(50) DEFAULT NULL,
+  `uname` varchar(50) DEFAULT NULL,
+  `upass` varchar(50) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `phone` varchar(15) DEFAULT NULL,
+  PRIMARY KEY (`uid`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+/*Data for the table `dataowner` */
+
+insert  into `dataowner`(`uid`,`fname`,`lname`,`uname`,`upass`,`email`,`phone`) values (1,'owner','owner','owner','tiger','owner@gmail.com','9878767654'),(2,'sujata','patil','sujata','tiger','ramesh.karuti@yahoo.co.in',NULL),(3,'d','d','d','d','d@gmail.com',NULL);
+
+/*Table structure for table `filedetails` */
+
+DROP TABLE IF EXISTS `filedetails`;
+
+CREATE TABLE `filedetails` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `filename` varchar(25) DEFAULT NULL,
+  `filekey` varchar(50) DEFAULT NULL,
+  `hashkey` varchar(50) DEFAULT NULL,
+  `userid` int(10) DEFAULT NULL,
+  `server` varchar(30) DEFAULT NULL,
+  `content` text,
+  `auth` int(10) DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+
+/*Data for the table `filedetails` */
+
+insert  into `filedetails`(`id`,`filename`,`filekey`,`hashkey`,`userid`,`server`,`content`,`auth`) values (7,'c.txt','940838996','506141002',2,'CS1','V2VsY29tZSB0byBNZWdhaW5mb3dhcmUu',2);
+
+/*Table structure for table `userdetails` */
+
+DROP TABLE IF EXISTS `userdetails`;
+
+CREATE TABLE `userdetails` (
+  `uid` int(10) NOT NULL AUTO_INCREMENT,
+  `fname` varchar(250) DEFAULT NULL,
+  `lname` varchar(250) DEFAULT NULL,
+  `uname` varchar(250) DEFAULT NULL,
+  `pass` varchar(250) DEFAULT NULL,
+  `email` varchar(250) DEFAULT NULL,
+  `dob` varchar(250) DEFAULT NULL,
+  `gender` varchar(250) DEFAULT NULL,
+  `phone` varchar(250) DEFAULT NULL,
+  `nationality` varchar(250) DEFAULT NULL,
+  `userstatus` varchar(25) DEFAULT NULL,
+  PRIMARY KEY (`uid`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+
+/*Data for the table `userdetails` */
+
+insert  into `userdetails`(`uid`,`fname`,`lname`,`uname`,`pass`,`email`,`dob`,`gender`,`phone`,`nationality`,`userstatus`) values (1,'rose','marray','rose','tiger','accademic.projects16@gmail.com','02/03/1980','Female','98787676545','Indian','1'),(2,'suraj','k','suraj','tiger','accademic.projects16@gmail.com','04/04/1987','Male','9741720720','Indian','1'),(3,'vishal','k','vishal','tiger','ramesh.karuti@yahoo.co.in','1983-02-02','Male','9741270720','Indian','1'),(4,'k','k','k','k','accademic.projects16@gmail.com','1987-02-02','Male','9741270720','Indian','0'),(5,'Subash','K','subash','tiger','subash@gmail.com','1985-04-03','Male','09741270720','Indian','1');
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

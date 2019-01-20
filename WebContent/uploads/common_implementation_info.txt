@@ -1,0 +1,71 @@
+//Authentication 
+	Auth auth = new Auth();
+	boolean expiredDate = auth.auth();
+	if (expiredDate) {
+		System.out.println("Welcome");
+	} else {
+		System.out.println("\nError");
+	}
+//AutoId gen
+		AutoIdGenerator aid = new AutoIdGenerator();
+		String query = "SELECT USERNAME FROM USERDETAILS WHERE USERNAME=(SELECT MAX(USERNAME) FROM USERDETAILS)";
+		String slid = aid.getUserId(query);
+		System.out.println("ID "+slid);
+		
+
+//Email Configuration Usage :
+
+	ConfirmationMailer cm = new ConfirmationMailer();
+	cm.sendMailTwoParams("accademic.projects16@gmail.com", "OTP");
+	cm.sendMailThreeParams("accademic.projects16@gmail.com", "OTP", "Token");
+
+//Date Compare :
+
+	// Compare Today's date with Input Date
+	DateComparision dc = new DateComparision();
+	boolean dateResult = dc.dateCompareWithToday("25-04-2017 14:50:56");
+	if (dateResult) {
+		System.out.println("Date Grater than Today's Date");
+	} else {
+		System.out.println("Date Lesser than Today's Date");
+	}
+
+	System.out.println("--------------------------------------------");
+
+// Compare Two dates
+	int dateResultInt = dc.compareTwoDates("25-04-2017 14:50:57", "25-04-2017 14:50:58");
+	if (dateResultInt == 1) {
+		System.out.println("Dates Equal ");
+	} else if (dateResultInt == 2) {
+		System.out.println("Date one Grater");
+	} else if (dateResultInt == 3) {
+		System.out.println("Date one Lesser");
+	} else {
+		System.out.println("Invalid date ");
+	}
+
+	System.out.println("--------------------------------------------");
+
+// Compare date before Plus/Minus days
+	int plusMinusDays = 5;
+	boolean dateDayResult = dc.datePlusMinusDays(plusMinusDays);
+	if (dateDayResult) {
+		System.out.println("Date Grater than " + plusMinusDays + " Today's Date");
+	} else {
+		System.out.println("Date Lesser than " + plusMinusDays + " Today's Date");
+	}
+	
+	
+//Get the formatted Date
+	public static void main(String arg[]) {
+		DateFormatter df = new DateFormatter();
+		String getFormattedDate = df.getFormattedDate(new Date());
+		System.out.println("Formatted Date: "+getFormattedDate);
+	}
+	
+//Invoke Counts
+	
+	String query = "SELECT * FROM PRODUCT_REVIEWS WHERE REVIEWER = '" + userid + "'";
+	int count = counthelp.invokeCount(query);
+	
+	
